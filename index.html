@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>智慧家庭用電節能提醒系統</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: sans-serif; margin: 2em; background: #f4f4f4; }
+    h1 { color: #2CA02C; }
+    .chart-container { background: white; padding: 1em; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+    .checkboxes { margin: 1em 0; }
+    .checkboxes label { margin-right: 1em; }
+    #advice { margin-top: 1em; font-weight: bold; color: #1F77B4; }
+  </style>
+</head>
+<body>
+  <h1>智慧家庭用電節能提醒系統</h1>
+  <div class="checkboxes">
+    <label><input type="checkbox" checked onchange="toggleRoom('living')"> 客廳</label>
+    <label><input type="checkbox" checked onchange="toggleRoom('bedroom')"> 臥室</label>
+    <label><input type="checkbox" checked onchange="toggleRoom('kitchen')"> 廚房</label>
+    <label><input type="checkbox" checked onchange="toggleRoom('bathroom')"> 浴室</label>
+  </div>
+  <div class="chart-container">
+    <canvas id="powerChart" width="600" height="300"></canvas>
+  </div>
+  <div id="advice">請選擇一段時間查看建議用電量。</div>
+  <script src="script.js"></script>
+</body>
+</html>
